@@ -35,6 +35,7 @@ public class Main {
             System.out.println("\t family-tree daughters of <full name>");
             System.out.println("To Exit");
             System.out.println("\t Type Exit");
+            System.out.println("Enter the query ---");
 
 
             String command = "";
