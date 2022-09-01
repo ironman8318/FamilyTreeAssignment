@@ -1,4 +1,4 @@
-package com.familytree;
+package com.familytree.driver;
 
 import com.familytree.DAO.DataStore;
 import com.familytree.DAO.HeapDataStore;
@@ -17,7 +17,7 @@ public class FamilyTreeDriver {
         this.store = new HeapDataStore();
     }
 
-    DataResult processCommand( List<String> arguments) throws IndexOutOfBoundsException  {
+    public DataResult processCommand( List<String> arguments) throws IndexOutOfBoundsException  {
         if(arguments.size() < 4) return new DataError("Invalid command");
         if(!arguments.get(0).equals("family-tree")) return new DataError("Invalid command,check syntax again");
 
