@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Welcome to the Family tree");
         while (true) {
             System.out.println("RelationShips");
-            System.out.println("\t Supported Relations - Father , son , Daughter , Spouse(Wife , Husband can also be used)");
+            System.out.println("\t Supported Relations - Father , son , Daughter , Wife , Husband");
             System.out.println("Queries example");
             System.out.println("\t family-tree show savedPerson");
             System.out.println("\t family-tree show savedRelation");
