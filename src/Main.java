@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Welcome to the Family tree");
         while (true) {
             System.out.println("RelationShips");
-            System.out.println("\t Supported Relations - Father , son , Daughter , Wife");
+            System.out.println("\t Supported Relations - Father , son , Daughter , Spouse(Wife , Husband can also be used)");
             System.out.println("Queries example");
             System.out.println("\t family-tree add person <full Name>");
             System.out.println("\t family-tree add relationship <name>");
@@ -23,9 +23,12 @@ public class Main {
             System.out.println("\t family-tree count sons of <full name>");
             System.out.println("\t family-tree count daughters of <full name>");
             System.out.println("\t family-tree count wives of <full name>");
+            System.out.println("\t family-tree count husbands of <full name>");
             System.out.println("\t family-tree father of <full name>");
             System.out.println("\t family-tree mother of <full name>");
             System.out.println("\t family-tree childrens of <full name>");
+            System.out.println("\t family-tree wives of <full name>");
+            System.out.println("\t family-tree husbands of <full name>");
             System.out.println("\t family-tree sons of <full name>");
             System.out.println("\t family-tree daughters of <full name>");
 

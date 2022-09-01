@@ -48,9 +48,15 @@ public class MySQLDataStore implements DataStore{
     }
 
     @Override
-    public boolean addSpouse(String personName, String spouseName) throws PersonNotFoundException {
+    public boolean addWife(String personName, String spouseName) throws PersonNotFoundException {
         return false;
     }
+
+    @Override
+    public boolean addHusband(String personName, String spouseName) throws PersonNotFoundException {
+        return false;
+    }
+
 
     @Override
     public List<Person> getAllChildren(String personName) throws PersonNotFoundException {
@@ -68,9 +74,15 @@ public class MySQLDataStore implements DataStore{
     }
 
     @Override
-    public List<Person> getAllSpouse(String personName) throws PersonNotFoundException {
+    public List<Person> getAllWives(String personName) throws PersonNotFoundException {
         return null;
     }
+
+    @Override
+    public List<Person> getAllHusbands(String personName) throws PersonNotFoundException {
+        return null;
+    }
+
 
     @Override
     public Person getFather(String personName) throws PersonNotFoundException {
@@ -93,7 +105,12 @@ public class MySQLDataStore implements DataStore{
     }
 
     @Override
-    public int getToTalSpouses(String personName) throws PersonNotFoundException {
+    public int getTotalWives(String personName) throws PersonNotFoundException {
+        return 0;
+    }
+
+    @Override
+    public int getTotalHusbands(String personName) throws PersonNotFoundException {
         return 0;
     }
 }

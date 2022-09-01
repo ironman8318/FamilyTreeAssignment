@@ -36,13 +36,15 @@ public class FamilyTreeDriver {
             case "count":
                 switch (arguments.get(2).toLowerCase()) {
                     case "sons":
-                       return countRelatives(arguments.get(4) ,arguments.get(5),"son");
+                       return countRelatives(arguments.get(4) ,arguments.get(5),"sons");
                     case "daughters":
-                        return countRelatives(arguments.get(4),arguments.get(5),"daughter");
-
+                        return countRelatives(arguments.get(4),arguments.get(5),"daughters");
+                    case "husbands":
+                        return countRelatives(arguments.get(4),arguments.get(5),"husbands");
                     case "wives":
-                        return countRelatives(arguments.get(4),arguments.get(5),"spouse");
+                        return countRelatives(arguments.get(4),arguments.get(5),"wives");
                 }
+                break;
             case "father":
                 return getRelative(arguments.get(3),arguments.get(4),"father");
 
@@ -53,6 +55,8 @@ public class FamilyTreeDriver {
                 return getRelatives(arguments.get(3), arguments.get(4),"childrens");
             case "wives":
                 return getRelatives(arguments.get(3), arguments.get(4),"wives");
+            case "husbands":
+                return getRelatives(arguments.get(3), arguments.get(4),"husbands");
             case "sons":
                 return getRelatives(arguments.get(3), arguments.get(4),"sons");
             case "daughters":
@@ -73,7 +77,7 @@ public class FamilyTreeDriver {
 
     public DataResult addRelationToStore(String relation) {
         if(relation.length() > 0) {
-            store.addRelationShip(relation);
+            store.addRelationShip(relation.toLowerCase());
         }else{
             return new DataError("Empty/No relationShip given");
         }
@@ -98,14 +102,17 @@ public class FamilyTreeDriver {
             try{
                 String name = firstName + " " +lastName;
                 switch (relation){
-                    case "son":
+                    case "sons":
                         value = store.getTotalSonCount(name);
                         break;
-                    case "daughter":
+                    case "daughters":
                         value = store.getToTalDaughter(name);
                         break;
-                    case "spouse":
-                        value = store.getToTalSpouses(name);
+                    case "wives":
+                        value = store.getTotalWives(name);
+                        break;
+                    case "husbands":
+                        value = store.getTotalHusbands(name);
                         break;
                     default:
                         return new DataError("Invalid/UnSupported relation in count command");
@@ -153,7 +160,10 @@ public class FamilyTreeDriver {
                         person = store.getAllChildren(name);
                         break;
                     case "wives":
-                        person = store.getAllSpouse(name);
+                        person = store.getAllWives(name);
+                        break;
+                    case "husbands":
+                        person = store.getAllHusbands(name);
                         break;
                     case "sons":
                         person = store.getAllSons(name);
@@ -233,8 +243,11 @@ public class FamilyTreeDriver {
                     case "daughter":
                         set = store.addDaughter(personName,relativeName);
                         break;
-                    case "spouse":
-                        set = store.addSpouse(personName,relativeName);
+                    case "wife":
+                        set = store.addWife(personName,relativeName);
+                        break;
+                    case "husband":
+                        set = store.addHusband(personName,relativeName);
                         break;
                     case "father":
                         set = store.setFather(personName,relativeName);

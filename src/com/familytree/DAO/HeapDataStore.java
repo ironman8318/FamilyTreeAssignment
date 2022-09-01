@@ -26,7 +26,7 @@ public class HeapDataStore implements DataStore{
 
     @Override
     public boolean checkRelationShip(String relation) {
-        if(relationShipStorage.get(relation) == null || !relationShipStorage.get(relation)) {
+        if(relationShipStorage.get(relation.toLowerCase()) == null || !relationShipStorage.get(relation)) {
             return false;
         };
         return true;
@@ -95,14 +95,26 @@ public class HeapDataStore implements DataStore{
     }
 
     @Override
-    public boolean addSpouse(String personName, String spouseName) throws PersonNotFoundException {
+    public boolean addWife(String personName, String spouseName) throws PersonNotFoundException {
         Person person = getPerson(personName);
         Person spouse = getPerson(spouseName);
 
         if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
         if(spouse == null) throw new PersonNotFoundException("Children Info doesn't exists");
 
-        person.addRelation(spouse , "spouse");
+        person.addRelation(spouse , "wife");
+        return true;
+    }
+
+    @Override
+    public boolean addHusband(String personName, String spouseName) throws PersonNotFoundException {
+        Person person = getPerson(personName);
+        Person spouse = getPerson(spouseName);
+
+        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(spouse == null) throw new PersonNotFoundException("Children Info doesn't exists");
+
+        person.addRelation(spouse , "husband");
         return true;
     }
 
@@ -155,12 +167,22 @@ public class HeapDataStore implements DataStore{
     }
 
     @Override
-    public List<Person> getAllSpouse(String personName) throws PersonNotFoundException {
+    public List<Person> getAllHusbands (String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
         if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
 
-        return person.getRelations().get("spouse");
+        return person.getRelations().get("husband");
+
+    }
+
+    @Override
+    public List<Person> getAllWives (String personName) throws PersonNotFoundException {
+        Person person = getPerson(personName);
+
+        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+
+        return person.getRelations().get("wife");
 
     }
 
@@ -209,15 +231,29 @@ public class HeapDataStore implements DataStore{
     }
 
 
+
     @Override
-    public int getToTalSpouses(String personName) throws PersonNotFoundException {
+    public int getTotalWives(String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
 
         if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
 
-        if(person.getRelations().containsKey("spouse")) {
-            return person.getRelations().get("spouse").size();
+        if(person.getRelations().containsKey("wife")) {
+            return person.getRelations().get("wife").size();
+        }
+        return 0;
+    }
+
+    @Override
+    public int getTotalHusbands(String personName) throws PersonNotFoundException {
+        Person person = getPerson(personName);
+
+
+        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+
+        if(person.getRelations().containsKey("husband")) {
+            return person.getRelations().get("husband").size();
         }
         return 0;
     }

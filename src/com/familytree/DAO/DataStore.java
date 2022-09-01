@@ -20,7 +20,9 @@ public interface DataStore {
     public boolean setFather(String personName, String fatherName) throws PersonNotFoundException;
     public boolean setMother(String personName, String motherName) throws PersonNotFoundException;
 
-    public boolean addSpouse(String personName , String spouseName ) throws PersonNotFoundException;
+    public boolean addWife(String personName , String spouseName ) throws PersonNotFoundException;
+
+    public boolean addHusband(String personName , String spouseName ) throws PersonNotFoundException;
 
     public List<Person> getAllChildren(String personName) throws PersonNotFoundException;
 
@@ -28,7 +30,9 @@ public interface DataStore {
 
     public List<Person> getAllDaughters(String personName) throws PersonNotFoundException;
 
-    public List<Person> getAllSpouse(String personName) throws PersonNotFoundException;
+    public List<Person> getAllWives(String personName) throws PersonNotFoundException;
+
+    public List<Person> getAllHusbands(String personName) throws PersonNotFoundException;
     public Person getFather(String personName) throws PersonNotFoundException;
     public Person getMother(String personName) throws PersonNotFoundException;
 
@@ -37,7 +41,9 @@ public interface DataStore {
     public int getToTalDaughter(String personName) throws PersonNotFoundException;
 
 
-    public int getToTalSpouses(String personName) throws PersonNotFoundException;
+    public int getTotalWives(String personName) throws PersonNotFoundException;
+    public int getTotalHusbands(String personName) throws PersonNotFoundException;
+
 
 
 }

@@ -1,30 +1,29 @@
 family-tree add relationship son
 family-tree add relationship father
+family-tree add relationship spouse
+family-tree add relationship mother
+family-tree add relationship wife
+family-tree add relationship husband
 family-tree add person Aman singh
 family-tree add person Shivraj singh
+family-tree add person Prema singh
+family-tree add person Premas singh
+family-tree add person Nidhi singh
+family-tree add person Pradeep singh
 family-tree connect Aman singh as son of Shivraj Singh
 family-tree connect Shivraj singh as father of Aman Singh
-family-tree count sons of Shivraj Singh
-family-tree add person Pradeep Singh
 family-tree connect Pradeep singh as son of Shivraj Singh
 family-tree connect Shivraj singh as father of Pradeep Singh
+family-tree connect Nidhi singh as wife of Pradeep Singh
+family-tree connect Pradeep singh as husband of Nidhi Singh
+family-tree connect Shivraj singh as husband of Prema Singh
+family-tree connect Prema singh as wife of Shivraj Singh
+family-tree connect Premas singh as wife of Shivraj Singh
 family-tree count sons of Shivraj Singh
-family-tree childrens of Shivraj Singh
-family-tree sons of Shivraj Singh
-family-tree daughters of Shivraj Singh
-family-tree add relationship daughter
-family-tree add relationship father
-family-tree add person Nisha singh
-family-tree add person Priti singh
-family-tree connect Nisha singh as daughter of Shivraj Singh
-family-tree connect Shivraj singh as father of Nisha Singh
-family-tree connect Priti singh as daughter of Shivraj Singh
-family-tree connect Shivraj singh as father of Priti Singh
-family-tree childrens of Shivraj Singh
-family-tree sons of Shivraj Singh
-family-tree daughters of Shivraj Singh
-family-tree add person prema singh
-family-tree add relationship spouse
-family-tree connect Prema Singh as spouse of Shivraj Singh
-family-tree wives of Shivraj Singh
+family-tree count husbands of Nidhi Singh
+family-tree count sons of Shivraj Singh
+family-tree count husbands of Shivraj Singh
 family-tree count wives of Shivraj Singh
+family-tree wives of Shivraj Singh
+family-tree wives of Pradeep Singh
+family-tree wives of Nidhi Singh
