@@ -1,4 +1,6 @@
 family-tree add relationship son
+family-tree show savedPerson
+family-tree show savedRelation
 family-tree add relationship father
 family-tree add relationship spouse
 family-tree add relationship mother
@@ -10,6 +12,8 @@ family-tree add person Prema singh
 family-tree add person Premas singh
 family-tree add person Nidhi singh
 family-tree add person Pradeep singh
+family-tree show savedPerson
+family-tree show savedRelation
 family-tree connect Aman singh as son of Shivraj Singh
 family-tree connect Shivraj singh as father of Aman Singh
 family-tree connect Pradeep singh as son of Shivraj Singh
@@ -27,3 +31,7 @@ family-tree count wives of Shivraj Singh
 family-tree wives of Shivraj Singh
 family-tree wives of Pradeep Singh
 family-tree wives of Nidhi Singh
+family-tree show savedPerson
+family-tree show savedRelation
+family-tree father of Aman singh
+family-tree father of Shivraj Singh

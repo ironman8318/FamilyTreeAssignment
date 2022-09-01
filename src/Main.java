@@ -17,6 +17,8 @@ public class Main {
             System.out.println("RelationShips");
             System.out.println("\t Supported Relations - Father , son , Daughter , Spouse(Wife , Husband can also be used)");
             System.out.println("Queries example");
+            System.out.println("\t family-tree show savedPerson");
+            System.out.println("\t family-tree show savedRelation");
             System.out.println("\t family-tree add person <full Name>");
             System.out.println("\t family-tree add relationship <name>");
             System.out.println("\t family-tree connect <full name 1> as <relationship> of <full name 2>");
@@ -34,8 +36,7 @@ public class Main {
 
 
             String command = "";
-
-
+          
             command = scanner.nextLine();
             List<String> arguments = List.of(command.split(" "));
 

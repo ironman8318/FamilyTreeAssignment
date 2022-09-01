@@ -10,7 +10,11 @@ Dillinger is a simple CLI tool made to store your family history in a elaborate 
 - Data store is implemented by a Interface , so user can use any data store they want (Mysql , Redis , etc)
 - Simple and understanble queries
 
+> i am adding a ``` commands.txt ``` file, from which one can copy commands and test program if needed
+
 ## Queries example
+- family-tree show savedPerson
+- family-tree show savedRelation
 - family-tree add person {full Name}
 - family-tree add relationship {name}
 - family-tree connect {full name 1} as <relationship> of {full name 2}
@@ -39,7 +43,10 @@ Dillinger is a simple CLI tool made to store your family history in a elaborate 
 ## How to stop the program
 ` simple type ``` exit ``` to exit the program.
 
-## Important Point
+## Important Points
+1.Relation map in Person object- This map is useful for storing any relation we want, for eg. A person may or may not have children, wives ,etc. for such type of scenarios this can be very helpful, as we dont have to store anything that we dont want.
+
+2.This Relation map also allows us to store any relation , for eg if we want to now keep track of all cousins,uncles of a individual , we can add them in this map.
 suppose we have added a father and son relationShip ,
 then we add a person Aman,
 then we add a person Shivraj,

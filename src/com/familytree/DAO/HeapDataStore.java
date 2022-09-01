@@ -39,6 +39,15 @@ public class HeapDataStore implements DataStore{
     }
 
     @Override
+    public List<String> getSavedPerson() {
+        return new ArrayList<String>(personStorage.keySet());
+    }
+    @Override
+    public List<String> getSavedRelation() {
+        return new ArrayList<String>(relationShipStorage.keySet());
+    }
+
+    @Override
     public Person getPerson(String name) {
         return personStorage.get(name.toLowerCase());
     }

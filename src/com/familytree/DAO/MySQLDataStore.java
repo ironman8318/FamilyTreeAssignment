@@ -23,6 +23,16 @@ public class MySQLDataStore implements DataStore{
     }
 
     @Override
+    public List<String> getSavedPerson() {
+        return null;
+    }
+
+    @Override
+    public List<String> getSavedRelation() {
+        return null;
+    }
+
+    @Override
     public Person getPerson(String name) {
         return null;
     }

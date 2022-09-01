@@ -12,6 +12,10 @@ public interface DataStore {
     public boolean checkRelationShip(String relation);
     public boolean addPerson(Person person);
 
+    public List<String> getSavedPerson();
+
+    public List<String> getSavedRelation();
+
     public Person getPerson(String name) ;
 
     public boolean addSon(String personName , String childName) throws PersonNotFoundException;
