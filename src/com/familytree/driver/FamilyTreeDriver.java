@@ -22,9 +22,9 @@ public class FamilyTreeDriver {
         if(!arguments.get(0).equals("family-tree")) return new DataError("Invalid command,check syntax again");
 
 
-        switch (arguments.get(1)) {
+        switch (arguments.get(1).toLowerCase()) {
             case "add":
-                switch (arguments.get(2)) {
+                switch (arguments.get(2).toLowerCase()) {
                     case "relationship":
                         return addRelationToStore(arguments.get(3));
 
@@ -34,7 +34,7 @@ public class FamilyTreeDriver {
                 }
 
             case "count":
-                switch (arguments.get(2)) {
+                switch (arguments.get(2).toLowerCase()) {
                     case "sons":
                        return countRelatives(arguments.get(4) ,arguments.get(5),"son");
                     case "daughters":
@@ -221,7 +221,6 @@ public class FamilyTreeDriver {
         }
 
         if(personFirstName.length() > 0 && personLastName.length() > 0 && relativeFirstName.length() > 0 && relativeLastName.length() > 0) {
-            Person person;
             boolean set = false;
             try{
                 String personName = personFirstName + " " +personLastName;

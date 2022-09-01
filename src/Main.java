@@ -17,14 +17,18 @@ public class Main {
             System.out.println("RelationShips");
             System.out.println("\t Supported Relations - Father , son , Daughter , Wife");
             System.out.println("Queries example");
-            System.out.println("\t family-tree add person <name>");
+            System.out.println("\t family-tree add person <full Name>");
             System.out.println("\t family-tree add relationship <name>");
-            System.out.println("\t family-tree connect <name 1> as <relationship> of <name 2>");
-            System.out.println("\t family-tree count sons of <name>");
-            System.out.println("\t family-tree count daughters of <name>");
-            System.out.println("\t family-tree count wives of <name>");
-            System.out.println("\t family-tree father of <name>");
-            System.out.println("\t family-tree mother of <name>");
+            System.out.println("\t family-tree connect <full name 1> as <relationship> of <full name 2>");
+            System.out.println("\t family-tree count sons of <full name>");
+            System.out.println("\t family-tree count daughters of <full name>");
+            System.out.println("\t family-tree count wives of <full name>");
+            System.out.println("\t family-tree father of <full name>");
+            System.out.println("\t family-tree mother of <full name>");
+            System.out.println("\t family-tree childrens of <full name>");
+            System.out.println("\t family-tree sons of <full name>");
+            System.out.println("\t family-tree daughters of <full name>");
+
 
             String command = "";
 
