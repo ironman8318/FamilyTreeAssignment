@@ -82,7 +82,7 @@ public class FamilyTreeDriver {
 
         }
 
-        return new DataSuccess("Success");
+        return new DataSuccess("Something went wrong, check your command with the above list");
     }
 
     public DataResult addRelationToStore(String relation) {

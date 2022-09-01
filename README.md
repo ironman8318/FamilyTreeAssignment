@@ -30,6 +30,10 @@ Dillinger is a simple CLI tool made to store your family history in a elaborate 
 - family-tree wives of {full name}
 - family-tree husbands of {full name}
 
+## Points to Consider
+- ### As this is a simple CLI tool ,so we cant expect user to use ID's for querying , that is why ***first and last name is made mandatory*** for queries , to ensure maximum uniqueness.
+- ### We need to match each and every word exactly in queries.
+- ### each word in query is case-insensitive
 
 ## Pre-requisites
 - Java installed

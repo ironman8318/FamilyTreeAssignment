@@ -58,8 +58,8 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
         Person children = getPerson(childName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(children == null) throw new PersonNotFoundException("Children Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
+        if(children == null) throw new PersonNotFoundException("Son Info doesn't exists");
 
         person.addRelation(children , "son");
         return true;
@@ -71,8 +71,8 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
         Person children = getPerson(childName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(children == null) throw new PersonNotFoundException("Children Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
+        if(children == null) throw new PersonNotFoundException("Daughter Info doesn't exists");
 
         person.addRelation(children , "daughter");
         return true;
@@ -83,8 +83,8 @@ public class HeapDataStore implements DataStore{
     public boolean setFather(String personName, String fatherName) throws PersonNotFoundException {
         Person person = getPerson(personName);
         Person father = getPerson(fatherName);
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(father == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("person Info doesn't exists");
+        if(father == null) throw new PersonNotFoundException("father Info doesn't exists");
 
         person.setFather(father);
 
@@ -95,8 +95,8 @@ public class HeapDataStore implements DataStore{
     public boolean setMother(String personName, String motherName) throws PersonNotFoundException {
         Person person = getPerson(personName);
         Person mother = getPerson(motherName);
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(mother == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("person Info doesn't exists");
+        if(mother == null) throw new PersonNotFoundException("mother Info doesn't exists");
 
         person.setMother(mother);
 
@@ -108,8 +108,8 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
         Person spouse = getPerson(spouseName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(spouse == null) throw new PersonNotFoundException("Children Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
+        if(spouse == null) throw new PersonNotFoundException("Wife Info doesn't exists");
 
         person.addRelation(spouse , "wife");
         return true;
@@ -120,8 +120,8 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
         Person spouse = getPerson(spouseName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
-        if(spouse == null) throw new PersonNotFoundException("Children Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
+        if(spouse == null) throw new PersonNotFoundException("Husband Info doesn't exists");
 
         person.addRelation(spouse , "husband");
         return true;
@@ -132,7 +132,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         List<Person> childrens =  getAllSons(personName);
 
@@ -156,7 +156,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         List<Person> childrens =  person.getRelations().get("son");
 
@@ -168,7 +168,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         List<Person> childrens =  person.getRelations().get("daughter");
 
@@ -179,7 +179,7 @@ public class HeapDataStore implements DataStore{
     public List<Person> getAllHusbands (String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person's Info doesn't exists");
 
         return person.getRelations().get("husband");
 
@@ -189,7 +189,7 @@ public class HeapDataStore implements DataStore{
     public List<Person> getAllWives (String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person's Info doesn't exists");
 
         return person.getRelations().get("wife");
 
@@ -199,7 +199,7 @@ public class HeapDataStore implements DataStore{
     public Person getFather(String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         return person.getFather();
     }
@@ -208,7 +208,7 @@ public class HeapDataStore implements DataStore{
     public Person getMother(String personName) throws PersonNotFoundException {
         Person person = getPerson(personName);
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         return person.getMother();
     }
@@ -218,7 +218,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         if(person.getRelations().containsKey("son")) {
             return person.getRelations().get("son").size();
@@ -231,7 +231,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         if(person.getRelations().containsKey("daughter")) {
             return person.getRelations().get("daughter").size();
@@ -246,7 +246,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         if(person.getRelations().containsKey("wife")) {
             return person.getRelations().get("wife").size();
@@ -259,7 +259,7 @@ public class HeapDataStore implements DataStore{
         Person person = getPerson(personName);
 
 
-        if(person == null) throw new PersonNotFoundException("Parents Info doesn't exists");
+        if(person == null) throw new PersonNotFoundException("Person Info doesn't exists");
 
         if(person.getRelations().containsKey("husband")) {
             return person.getRelations().get("husband").size();

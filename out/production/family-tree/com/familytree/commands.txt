@@ -35,3 +35,4 @@ family-tree show savedPerson
 family-tree show savedRelation
 family-tree father of Aman singh
 family-tree father of Shivraj Singh
+family-tree mother of SDasd adasd

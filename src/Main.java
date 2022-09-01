@@ -33,15 +33,17 @@ public class Main {
             System.out.println("\t family-tree husbands of <full name>");
             System.out.println("\t family-tree sons of <full name>");
             System.out.println("\t family-tree daughters of <full name>");
+            System.out.println("To Exit");
+            System.out.println("\t Type Exit");
 
 
             String command = "";
-          
+
             command = scanner.nextLine();
             List<String> arguments = List.of(command.split(" "));
 
 
-            if (arguments.get(0).equals("exit")) {
+            if (arguments.get(0).toLowerCase().equals("exit")) {
                 System.exit(1);
             }
             try {
@@ -49,7 +51,7 @@ public class Main {
                 System.out.println();
                 System.out.println(res.message() + "\n" + res.getValue());
             } catch (IndexOutOfBoundsException i) {
-                System.out.println("Something is wrong with the command , kindly check and try again");
+                System.out.println("Something is wrong with the command , kindly check and try again ,Note := first and last name is mandatoryfa");
                 continue;
             }
 
