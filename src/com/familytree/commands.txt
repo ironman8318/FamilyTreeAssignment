@@ -1,0 +1,30 @@
+family-tree add relationship son
+family-tree add relationship father
+family-tree add person Aman singh
+family-tree add person Shivraj singh
+family-tree connect Aman singh as son of Shivraj Singh
+family-tree connect Shivraj singh as father of Aman Singh
+family-tree count sons of Shivraj Singh
+family-tree add person Pradeep Singh
+family-tree connect Pradeep singh as son of Shivraj Singh
+family-tree connect Shivraj singh as father of Pradeep Singh
+family-tree count sons of Shivraj Singh
+family-tree childrens of Shivraj Singh
+family-tree sons of Shivraj Singh
+family-tree daughters of Shivraj Singh
+family-tree add relationship daughter
+family-tree add relationship father
+family-tree add person Nisha singh
+family-tree add person Priti singh
+family-tree connect Nisha singh as daughter of Shivraj Singh
+family-tree connect Shivraj singh as father of Nisha Singh
+family-tree connect Priti singh as daughter of Shivraj Singh
+family-tree connect Shivraj singh as father of Priti Singh
+family-tree childrens of Shivraj Singh
+family-tree sons of Shivraj Singh
+family-tree daughters of Shivraj Singh
+family-tree add person prema singh
+family-tree add relationship spouse
+family-tree connect Prema Singh as spouse of Shivraj Singh
+family-tree wives of Shivraj Singh
+family-tree count wives of Shivraj Singh
